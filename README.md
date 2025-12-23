@@ -54,11 +54,11 @@ cp-msai/
 - train_model.py - Model training and evaluation
 - labeled_data.csv - Labeled text dataset
 - model_with_metrics/ - Saved trained model and tokenizer
--- config.json - Model configuration
--- pytorch_model.bin - Weights of the trained DistilBERT
--- tokenizer.json , vocab.txt - Tokenizer
--- tokenizer_config.json, special_tokens_map.json - Service files
--- requirements.txt - Python dependencies
+ - config.json - Model configuration
+ - pytorch_model.bin - Weights of the trained DistilBERT
+ - tokenizer.json , vocab.txt - Tokenizer
+ - tokenizer_config.json, special_tokens_map.json - Service files
+- requirements.txt - Python dependencies
 - README.md - Project documentation
 
 ---
