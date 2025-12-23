@@ -1,6 +1,6 @@
 # Detecting Aggressive Rhetoric with DistilBERT
 
-This project implements a **binary text classification system** for detecting **aggressive / toxic rhetoric** in short texts (tweets or messages).  
+This project implements a **binary text classification system** for detecting **aggressive / toxic rhetoric** in short texts.  
 It combines a **fine-tuned DistilBERT model**, **Explainable AI (LIME)**, and an **interactive Streamlit web application**.
 
 The project demonstrates a **complete NLP pipeline**: data preprocessing, model training, evaluation, model persistence, and deployment.
@@ -10,7 +10,7 @@ The project demonstrates a **complete NLP pipeline**: data preprocessing, model 
 ## Key Features
 
 - **Binary classification**
-  - Aggressive / Toxic — `1`
+  - Aggressive  — `1`
   - Non-Aggressive — `0`
 
 - **Transformer-based NLP model**
@@ -50,34 +50,32 @@ The project demonstrates a **complete NLP pipeline**: data preprocessing, model 
 ## Project Structure
 
 cp-msai/
-- app.py # Streamlit web application
-- train_model.py # Model training and evaluation
-- labeled_data.csv # Labeled text dataset
-- model_with_metrics/ # Saved trained model and tokenizer
--- config.json
--- pytorch_model.bin
--- tokenizer.json
--- tokenizer_config.json
--- vocab.txt
--- special_tokens_map.json
--- requirements.txt # Python dependencies
-- README.md # Project documentation
-
----
-
+- app.py - Streamlit web application
+- train_model.py - Model training and evaluation
+- labeled_data.csv - Labeled text dataset
+- model_with_metrics/ - Saved trained model and tokenizer
+-- config.json - Model configuration
+-- pytorch_model.bin - Weights of the trained DistilBERT
+-- tokenizer.json , vocab.txt - Tokenizer
+-- tokenizer_config.json, special_tokens_map.json - Service files
+-- requirements.txt - Python dependencies
+- README.md - Project documentation
 
 ---
 
 ## Dataset
 
-- **Input:** short texts (tweets / messages)
-- **Text column:** `tweet` or `text`
-- **Label column:** `class` or `label`
+Link: https://www.kaggle.com/datasets/yashdogra/toxic-tweets
+- **Input:** texts 
+- **Text column:** `tweet` 
+- **Label column:** `class`
 - **Target variable:**
-  - `1` — Aggressive / Toxic
+  - `1` — Aggressive 
   - `0` — Non-Aggressive
 
 ### Preprocessing steps:
+
+
 - removal of missing values;
 - conversion to binary labels;
 - stratified train/validation split;
@@ -111,5 +109,4 @@ To train the model from scratch:
 ```bash
 git clone https://github.com/maslovvskkaya/cp-msai.git
 cd cp-msai
-pip install -r requirements.txt
 python train_model.py
